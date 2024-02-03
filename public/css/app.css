@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins:wght@100&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins:wght@100&display=swap'); */
 
 @import 'variable.css';
 @import 'global.css';
@@ -8,3 +8,4 @@
 Pages
 */
 @import './pages/home.css';
+@import './pages/auth.css';

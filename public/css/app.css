@@ -1,1 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins:wght@100&display=swap');
+
+/*
+Pages
+*/
+@import './pages/home.css';

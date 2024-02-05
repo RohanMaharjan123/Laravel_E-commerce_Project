@@ -26,9 +26,9 @@ class AuthController extends Controller
         //validation process
         // dd($request->all());
         $request->validate([
-            'name' => 'required,',
-            'email' => 'required',
-            'password'=> 'required'
+            'name' => 'required', //'required|min:3|max:255'
+            'email' => 'required', //'required|email|max:255|unique:users'
+            'password'=> 'required' //'required|min:8|confirmed'
         ]);
 
         //registration process
@@ -54,6 +54,7 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
+        return back();
     }
 
     //Password Reset

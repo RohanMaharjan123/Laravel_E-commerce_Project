@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -18,10 +21,40 @@ class AuthController extends Controller
         return view('pages.register');
     }
 
-    //Register User 
+    //Register User
+    public function postRegister(Request $request){
+        //validation process
+        // dd($request->all());
+        $request->validate([
+            'name' => 'required,',
+            'email' => 'required',
+            'password'=> 'required'
+        ]);
 
-    // Login User 
+        //registration process
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        
+
+
+        //login
+        Auth::login($user);
+
+        return back()->with('success', 'Successfully Logged In!');
+    }
+
+
+    // Login User
     
+    //Logout
+    public function logout()
+    {
+        Auth::logout();
+    }
 
     //Password Reset
     

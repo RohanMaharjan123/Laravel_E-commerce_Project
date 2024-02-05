@@ -1,11 +1,12 @@
-@extends('layouts.master')
+@extends("layouts.master")
 @section('title', 'Register')
 @section('content')
     <section class="login-page">
         <div class="login-form-box">
             <div class="login-title">Register</div>
             <div class="login-form">
-                <form action="" method="post">
+                <form action="/register" method="post">
+                    @csrf
                     <div class="field">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Taylor Swift">
@@ -20,7 +21,7 @@
                     </div>
                     <div class="field">
                         <label for="confirmation_password">Confirm Password</label>
-                        <input type="password" id="cpassword" name="confirmation_password" placeholder="***********">
+                        <input type="password" id="email" name="confirmation_password" placeholder="***********">
                     </div>
                     <div class="field">
                         <button type="submit" class="btn btn-primary btn-block">Register</button>

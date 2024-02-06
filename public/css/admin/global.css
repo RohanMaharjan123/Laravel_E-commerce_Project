@@ -28,3 +28,11 @@ body{
 .btn-block{
     width: 100%;
 }
+.admin-main{
+    margin-left: var(--nav-width);
+}
+
+.page-title{
+    color: var(--primary);
+    margin-bottom: 15px;
+}

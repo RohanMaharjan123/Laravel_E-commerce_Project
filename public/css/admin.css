@@ -2,3 +2,7 @@
 
 @import 'admin/variables.css';
 @import 'admin/global.css';
+
+
+/* Partials */
+@import 'admin/partials/nav.css';

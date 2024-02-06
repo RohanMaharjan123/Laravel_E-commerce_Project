@@ -71,7 +71,7 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return back('/login');
+        return redirect('/login');
     }
 
     //Password Reset

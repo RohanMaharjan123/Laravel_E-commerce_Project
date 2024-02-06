@@ -1,6 +1,10 @@
 :root{
-    --primary: #6100ff;
-    --primary-dark: #260064;
+    --primary: #4BB3FD; /*Argentinian Blue*/
+    --primary-dark: #027BCE; /* Honolulu Blue*/
     --grey: grey;
     --danger: #e91e1e;
 }
+
+/* --primary: #6100ff
+    --primary: #260064
+*/

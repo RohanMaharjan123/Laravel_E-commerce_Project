@@ -32,9 +32,10 @@ input{
     padding: 10px 15px;
     border-radius: 200px;
     border: 1px solid #ddd;
-    .has-error{
-        border-color: var(--danger);
-    }
+    
+}
+.has-error{
+    border-color: var(--danger);
 }
 /* input::placeholder{
     text-align: center;

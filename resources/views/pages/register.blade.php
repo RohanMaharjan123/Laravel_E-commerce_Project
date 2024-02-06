@@ -5,18 +5,18 @@
         <div class="login-form-box">
             <div class="login-title">Register</div>
             <div class="login-form">
-                <form action="/register" method="post">
+                <form action="{{route('register')}}" method="post">
                     @csrf
                     <div class="field">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" class=" @error('name') has-error @enderror" placeholder="Taylor Swift">
+                        <input type="text" id="name" name="name" class = " @error('name') has-error @enderror" placeholder="Taylor Swift">
                         @error('name')
                             <span class="field-error">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="field">
                         <label for="name">Email</label>
-                        <input type="email" id="email" name="email" class=" @error('email') has-error @enderror" placeholder="taylorswift@icloud.com">
+                        <input type="email" id="email" name="email" class = " @error('email') has-error @enderror" placeholder="taylorswift@icloud.com">
                         @error('email')
                             <span class="field-error">{{$message}}</span>
                         @enderror

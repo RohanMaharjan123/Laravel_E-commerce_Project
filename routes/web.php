@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,21 @@ Route::post('/login', [AuthController::class, 'postLogin'])->name('login');
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
+//Admin panel routing
 
-// Route::get('/adminpanel', [AdminController::class, 'dashboard'])->name('adminpanel')->middleware('admin');
-Route::get('/adminpanel', [AdminController::class, 'dashboard'])->name('adminpanel');
+// Route::group(['prefix'=> 'adminpanel', 'middleware' => 'admin'], function () {
+//     Route::get('/', [AdminController::class, 'dashboard'])->name('adminpanel');
+// });
+Route::group(['prefix' => 'adminpanel'], function(){
+    Route::get('/', [AdminController::class, 'dashboard'])->name('adminpanel');
+
+    //Products
+    Route::group(['prefix' => 'books'], function(){
+        Route::get('/', [ProductController::class, 'index'])->name('adminpanel.books');
+        Route::get('/create', [ProductController::class, 'create'])->name('adminpanel.create');
+        Route::get('/store', [ProductController::class, 'store'])->name('adminpanel.store');
+        Route::get('/', [ProductController::class, 'index'])->name('adminpanel.books');
+
+    });
+
+});

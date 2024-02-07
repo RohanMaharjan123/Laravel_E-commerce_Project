@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BooksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,10 +47,10 @@ Route::group(['prefix' => 'adminpanel'], function(){
 
     //Products
     Route::group(['prefix' => 'books'], function(){
-        Route::get('/', [ProductController::class, 'index'])->name('adminpanel.books');
-        Route::get('/create', [ProductController::class, 'create'])->name('adminpanel.create');
-        Route::get('/store', [ProductController::class, 'store'])->name('adminpanel.store');
-        Route::get('/', [ProductController::class, 'index'])->name('adminpanel.books');
+        Route::get('/', [BooksController::class, 'index'])->name('adminpanel.books');
+        Route::get('/create', [BooksController::class, 'create'])->name('adminpanel.create');
+        Route::get('/store', [BooksController::class, 'store'])->name('adminpanel.store');
+        Route::get('/', [BooksController::class, 'index'])->name('adminpanel.books');
 
     });
 

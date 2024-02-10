@@ -30,9 +30,12 @@ body{
 }
 .admin-main{
     margin-left: var(--nav-width);
+    padding: 30px;
 }
 
 .page-title{
     color: var(--primary);
     margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
 }

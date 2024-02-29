@@ -11,7 +11,7 @@ class Books extends Model
     use HasFactory;
     // has one category
 
-    protected $secured = [];
+    protected $guarded = [];
     public function genre(){
         return $this->belongsTo(Genre::class);
     }

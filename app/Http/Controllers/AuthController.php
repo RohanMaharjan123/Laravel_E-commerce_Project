@@ -23,6 +23,7 @@ class AuthController extends Controller
 
     //Register User
     public function postRegister(Request $request){
+    
         //validation process
         // dd($request->all());
         $request->validate([

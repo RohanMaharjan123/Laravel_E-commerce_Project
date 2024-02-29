@@ -49,7 +49,7 @@ Route::group(['prefix' => 'adminpanel'], function(){
     Route::group(['prefix' => 'books'], function(){
         Route::get('/', [BooksController::class, 'index'])->name('adminpanel.books');
         Route::get('/create', [BooksController::class, 'create'])->name('adminpanel.create');
-        Route::get('/store', [BooksController::class, 'store'])->name('adminpanel.store');
+        Route::post('/store', [BooksController::class, 'store'])->name('adminpanel.store');
         Route::get('/', [BooksController::class, 'index'])->name('adminpanel.books');
     });
     //Book Genres

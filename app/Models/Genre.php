@@ -10,7 +10,7 @@ class Genre extends Model
 {
     use HasFactory;
     protected $secured = [];
-    public function book(){
+    public function books (){
         return $this->hasMany(Books::class);
     }
 }

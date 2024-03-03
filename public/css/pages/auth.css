@@ -32,7 +32,17 @@ input{
     padding: 10px 15px;
     border-radius: 200px;
     border: 1px solid #ddd;
+    
+}
+.has-error{
+    border-color: var(--danger);
 }
 /* input::placeholder{
     text-align: center;
 } */
+
+.field-error{
+    color: var(--danger);
+    font-size: 13px;
+    margin-top: 2px;
+}

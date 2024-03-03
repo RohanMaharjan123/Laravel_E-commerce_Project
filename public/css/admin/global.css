@@ -30,7 +30,7 @@ body{
 }
 .admin-main{
     margin-left: var(--nav-width);
-    padding: 30px;
+    padding: 40px 25px;
 }
 
 .page-title{

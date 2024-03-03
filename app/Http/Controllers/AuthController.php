@@ -27,9 +27,9 @@ class AuthController extends Controller
         //validation process
         // dd($request->all());
         $request->validate([
-            'name' => 'required', //'required|min:3|max:255'
-            'email' => 'required', //'required|email|max:255|unique:users'
-            'password'=> 'required', //'required|min:8|confirmed'
+            'name' => ['required', 'min:3', 'max:255'], //'required|min:3|max:255'
+            'email' => ['required', 'email', 'max:255'], //'required|email|max:255|unique:users'
+            'password'=> ['required', 'min:8'], //'required|min:8|confirmed'
         ]);
 
         //registration process

@@ -5,13 +5,13 @@
     </div>
     <ul>
         <li>
-            <a href="">Dashbaord</a>
+            <a href="{{route('adminpanel')}}">Dashbaord</a>
         </li>
         <li>
-            <a href="">Books</a>
+            <a href="{{route('adminpanel.books')}}">Books</a>
         </li>
         <li>
-            <a href="">Genres</a>
+            <a href="{{route('adminpanel.genres')}}">Genres</a>
         </li>
         <li>
             <a href="">Orders</a>

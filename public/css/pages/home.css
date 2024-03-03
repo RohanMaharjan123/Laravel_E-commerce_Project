@@ -1,2 +1,18 @@
 @import './components/home/header.css';
 
+.books-section{
+    padding: 70px 0;
+}
+.section-title{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+    
+}
+.book-row{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}

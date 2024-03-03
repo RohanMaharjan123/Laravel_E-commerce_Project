@@ -9,4 +9,10 @@ Pages
 */
 @import './pages/home.css';
 @import './pages/auth.css';
-@import "node_modules/bootstrap/scss/bootstrap";
+@import './pages/accounts.css';
+@import './pages/book.css';
+/* @import "node_modules/bootstrap/css/bootstrap"; */
+@import '~bootstrap/dist/css/bootstrap.css';
+
+/* Component */
+@import './pages/components/bookBox.css';

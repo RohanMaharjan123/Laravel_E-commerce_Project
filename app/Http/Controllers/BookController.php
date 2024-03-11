@@ -13,10 +13,14 @@ class BookController extends Controller
     // function to use for displaying the table data
     public function index(){
         // $books = Book::with('genre')->orderBy('created_at', 'desc')->get();
-        $books =Book::all();
-        return view('admin.pages.books.index',['books' => $books]);
+        $books =Book::get();
+        return view('admin.pages.books.index', compact('books'));
     }
-
+    // public function show(Book $book) {
+    //     return view('book.show', ['book' => $book]);
+    // }
+    
+    
     //create function
 
     public function create(){
@@ -26,36 +30,32 @@ class BookController extends Controller
     }
 
     //store
-    public function store(Request $request){
-        // dd($request->all());
+    public function store(Request $request)
+{
+    // Validate the request data
+    $request->validate([
+        'title' => ['required', 'max:255'],
+        'genre_id' => ['required'], // Ensure genre_id is required
+        'price' => ['required'],
+        'image' => ['required', 'image', 'mimes:jpg,jpeg,png,gif,svg', 'max:2048']
+    ]);
 
-        //validate
-        $request->validate([
-            'title' => ['required', 'max:255'],
-            'genre_id' => ['required'], // Make sure genre_id is required
-            'price' => ['required'],
-            'image' => ['required', 'image', 'mimes:jpg,jpeg,png,gif,svg', 'max:2048']
-        ]);
+    // Store the image
+    $image_name = 'books/' . time() . rand(0, 9999) . '.' . $request->image->getClientOriginalExtension();
+    $request->image->storeAs('public', $image_name);
 
-        //store image
-        $image_name = 'books/' . time() . rand(0, 9999) . '.' . $request->image->getClientOriginalExtension();
-        // dd($image_name);
-        $request->image->storeAs('public', $image_name);
-        //store
+    // Create a new Book instance with provided data
+    $book = Book::create([
+        'title' => $request->title,
+        'genre_id' => $request->genre_id,
+        'price' => $request->price * 100,
+        'description' => $request->description,
+        'image' => $image_name
+    ]);
 
-        $book = Book::create([
-            'title' => $request->title,
-            'genre_id' => $request->genre_id,
-            'price' => $request->price * 100,
-            'description' => $request->description,
-            'image' => $image_name
-        ]);
-        
-
-
-        //response
-        return back()->with('success', 'Book saved');
-    }
+    // Return a response
+    return back()->with('success', 'Book saved');
+}
 
     //Edit
     public function edit($id){

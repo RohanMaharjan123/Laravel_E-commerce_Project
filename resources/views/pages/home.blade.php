@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('name', 'Home Page')
+@section('title', 'Home Page')
 @section('content')
     <main class ="homepage">
 
@@ -9,10 +9,9 @@
         <div class="container">
             <h1 class="section-title">Featuring Books</h1>
             <div class="books-row">
-
-                {{-- @foreach ($books as $book)
+                @foreach ($books as $book)
                     <x-book-box :book="$book"/>
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </section>

@@ -12,10 +12,16 @@ class Book extends Model
     // has one category
 
     protected $guarded = [];
-    // protected $fillable = ['title', 'price', 'description', 'image'];
-    public function genre(){
-        return $this->hasMany(Genre::class);
-    }
+    protected $fillable = ['title', 'genre_id', 'price', 'description', 'image'];
+    // public function genre(){
+    //     return $this->hasMany(Genre::class);
+    // }
+    public function genre()
+{
+    return $this->belongsTo(Genre::class);
+}
+
+
 //     public function genre()
 // {
 //     return $this->belongsToMany(Genre::class, 'book_genre', 'book_id', 'genre_id');

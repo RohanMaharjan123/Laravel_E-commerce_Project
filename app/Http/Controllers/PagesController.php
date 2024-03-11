@@ -10,9 +10,9 @@ class PagesController extends Controller
     //Home
     public function home()
     {
-        // $books = Books::with('genre')->orderBy('created_at', 'desc')->get();
-        // return view("pages/home", ['books'=> $books]);
-        return view("pages/home");
+        $books = Book::with('genre')->orderBy('created_at', 'desc')->get();
+        return view("pages/home", ['books'=> $books]);
+        // return view("pages/home");
     }
     //Cart
     public function cart()

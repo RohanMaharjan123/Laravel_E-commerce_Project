@@ -19,6 +19,5 @@ class Genre extends Model
         return $this->belongsTo(Book::class);
     }
     /*
-   
     */
 }

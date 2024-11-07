@@ -1,5 +1,8 @@
 # E-store Project Output
 
+## Contributing
+If you find this project helpful, please give it a ⭐ and feel free to contribute to its improvement!
+
 ## Overview
 The E-store project is an e-commerce platform designed to facilitate the purchase of books online, providing customers with a seamless and secure shopping experience.
 
@@ -15,7 +18,7 @@ The E-store project is an e-commerce platform designed to facilitate the purchas
 The E-store project follows a three-tier architecture:
 1. **Presentation Layer:** User-facing interface built for seamless navigation.
 2. **Application Layer:** Handles business logic and data processing.
-3. **Data Layer:** Uses MongoDB for data storage.
+3. **Data Layer:** Uses MYSQL for data storage, artisan for migration and ORM as Eloquent.
 
 ![Three-Tier Architecture](screenshot/threetier.png)
 

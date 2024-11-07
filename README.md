@@ -1,66 +1,63 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# E-store Project Output
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Overview
+The E-store project is an e-commerce platform designed to facilitate the purchase of books online, providing customers with a seamless and secure shopping experience.
 
-## About Laravel
+## Features of the Project
+- **User Registration and Login:** Allows users to create an account and access the platform's functionalities.
+- **Product Browsing and Search:** Users can browse and filter books by category, price, etc.
+- **Shopping Cart and Checkout:** Add books to the cart, review orders, and proceed with checkout.
+- **Payment Processing:** Integrated with multiple payment options, such as Khalti and cash on delivery.
+- **Admin Features:** Admins can manage books and categories, including adding, editing, and deleting books.
+- **Responsive Design:** Optimized for use on desktop, tablets, and mobile devices.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## System Architecture
+The E-store project follows a three-tier architecture:
+1. **Presentation Layer:** User-facing interface built for seamless navigation.
+2. **Application Layer:** Handles business logic and data processing.
+3. **Data Layer:** Uses MongoDB for data storage.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![Three-Tier Architecture](screenshot/threetier.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Screenshots
+### 1. Homepage
+![E-store Homepage](screenshot/homepage1.png)
+![E-store Homepage](screenshot/homepage2.png)
 
-## Learning Laravel
+### 2. Login/Homepage Listing
+![Login/Homepage Listing ](screenshot/login.png)
+![Login/Homepage Listing ](screenshot/register.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 3. Product Listing
+![Product Listing](screenshot/listing-normalization.png)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 4. Genre Listing
+![Genre Listing](screenshot/genre.png)
+![Create Genre Listing](screenshot/genrecreate.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 5. Add Book Listing
+![Add Book Listing](screenshot/addbook.png)
 
-## Laravel Sponsors
+### 6. Checkout Page
+![Checkout Page](screenshot/checkout.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Project Objectives
+- Provide customers with a wide range of book options at competitive prices.
+- Offer a user-friendly, secure platform for online book purchases.
 
-### Premium Partners
+## Implementation Details
+- **Frontend:** Laravel framework with responsive UI.
+- **Backend:** PHP-based server-side logic.
+- **Database:** MYSQL for storing book and user data.
+- **Payment Integration:** Khalti and eSewa for secure transactions.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Testing and Validation
+All core functionalities, such as user registration, login, product browsing, checkout, and admin operations, were tested to ensure smooth user interactions and system stability.
 
-## Contributing
+## Future Enhancements
+- **Product Recommendations:** Suggest books based on search trends.
+- **Enhanced Search and Filtering Options.**
+- **Improved Payment System Integration.**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Lessons Learned
+Building the E-store project provided valuable insights into e-commerce development, Laravel integration, and online payment gateways.
